@@ -1,0 +1,110 @@
+Install the tools
+
+    Download and Install XAMPP
+        https://www.apachefriends.org/index.html
+    Download and Install Visual Studio Code
+        https://code.visualstudio.com/
+        Using the Terminal in Visual Studio Code
+    Install NPM
+        https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
+    Install Vue.js
+        https://cli.vuejs.org/guide/installation.html
+
+Set up the project
+
+    Create a Vue project in C:\xampp\htdocs
+        https://cli.vuejs.org/guide/creating-a-project.html#vue-create
+        Manually select features
+        Select Vuex, Router, Linter/Formatter
+    Test the app with 'npm run serve' and 
+    Add Vuetify to project
+        https://vuetifyjs.com/en/getting-started/installation/#vue-cli-install 
+    Open the project directory in VSCode
+
+Introduction to the Vue project
+
+    public/index.html
+        noscript tag
+        app div tag
+    src/main.js
+        Entry point to the Vue app
+        imports
+        settings
+        Vue instance
+    Single-File Components: src/App.vue
+        Single-file components
+            Template tag
+            Script tag
+            Style tag
+        Importing more components: components/HelloWorld.vue
+        Additional pages: views/Home.vue, views/About.vue
+    assets
+    Vue-Router
+    Vuex datastore
+
+Side Note: Changing the app name
+    
+	Change root directory name
+    Change package.json name
+    re-run npm install
+
+The project's directory structure
+
+    Default structure organizes by the type of file
+    Organizing by feature instead
+        app features
+            Create src/app directory, move App.vue into it, change its import in main.js
+            Create the src/app/views directory for pages related to the main app itself
+                Move src/views/Home and About into src/app/views
+                Change Router paths, remove Home import
+                Set webpackChunkname to 'app'
+            Create the src/app/components directory for app-wide usable components
+            Create the src/app/models
+				Create store module and add reference to store/index.js
+				
+
+Planning the modules
+
+    https://dev.to/dailydotdev/5-react-based-projects-every-beginner-must-try-571o
+    https://dev.to/slawomirkolodziej/5-javascript-projects-you-should-build-as-junior-frontend-developer-4gm3
+
+    Name, main goal, and requirements
+        Todo App: Add tasks and mark them as complete as you do them
+            Try using Firebase Database manager
+        Weather App: Display weather information by city
+            Use OpenWeather API: https://openweathermap.org/api
+        COVID-19 Information App: View current information and stats about COVID-19
+            Use Open Disease Data - https://disease.sh/
+        Recipe App: Display and save recipes for cooking yummy food
+            Use Edamam API: https://www.edamam.com/
+        Calculator App: Provide basic arithmetic and scientific functions
+        Budget App: Track, organize, and plan household finances
+            Use Bank APIs - Teller.io https://teller.io/docs/api/2020-10-12
+                Set up Teller account, download teller.zip, connect a bank account
+        Blogging App: Create blog articles to publish on a templated web page
+            Wysiwyg editor: CKEditor 
+                https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/frameworks/vuejs.html
+            Reference PSD to create some templates: https://symu.co/freebies/templates-4/blog-psd-template/
+            provide a homepage, single post page, and contact page for template
+            create a New/Edit Post page which allows entering new or editing old blog post information
+            .... (brainstorm all features)
+            try using CSS Grid
+            page should be responsive to screen size
+        Tic-Tac-Toe Game: Play games of Tic-Tac-Toe against AI or other players online
+            welcome screen with name and symbol input for each player
+            render a symbol when a user clicks on the empty cell
+            win verification
+            Extra: scoreboard and saving it to server database
+            Extra: playing with a computer AI, try minmax algorithm or another solution
+        Location Sharing App: Share your location with one or more friends
+            displaying your current location on a map
+            "Share" button which creates a link with your current location
+            a page which displays a location embedded in URL
+            Extra: sharing your realtime location, you will have to save it and read it every few seconds from an external database (Firebase?)
+            displaying the realtime location of your friend when he accesses the page
+        TV Series Tracker App: Track premieres of new TV show episodes and view information about them
+            Searching for TV series with TVMaze API
+            adding TV Series to the tracking list
+            displaying tracked TV Series list along with newest episode premiere date
+            show more information about the TV Series
+            saving tracking list to local storage
